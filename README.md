@@ -46,10 +46,10 @@ The following verification tests prove the efficiency, security, and scalability
 
 | Test Component / Scenario | Expected Behavior | Verification Status |
 | :--- | :--- | :--- |
-| **Bastion Host:** Remote Access Tunneling | Secure traffic entering internal subnets via SSH from an external PC. | 🟢 **SUCCESS** |
-| **Subnet Isolation:** Direct public connection to App Server | Immediate connection timeout message. | 🟢 **SUCCESS** |
-| **Web Tier Direct Access:** Direct HTTP connection bypass to Web Server | Request dropped; Web servers only accept traffic from the ALB. | 🟢 **SUCCESS** |
-| **Lateral Movement:** Compromised Web Server SSH attempt to App Server | Connection timeout; App server strictly limits SSH ingress to the Bastion. | 🟢 **SUCCESS** |
-| **Database Access:** Web Server to OpenSearch isolation check | Web server direct queries fail; OpenSearch only permits authenticated App Server traffic. | 🟢 **SUCCESS** |
-| **Application Load Balancer:** Traffic distribution check | ALB balances web traffic to both Web servers. | 🟢 **SUCCESS** |
-| **Instance Self-Healing:** EC2 instance health detection and recovery | After terminating an instance, the ALB detects an unhealthy instance, and the ASG automatically deploys a replacement instance. | 🟢 **SUCCESS** |
+| **Bastion Host:** Remote Access Tunneling | Secure traffic entering internal subnets via SSH from an external PC. | **SUCCESS** |
+| **Subnet Isolation:** Direct public connection to App Server | Immediate connection timeout message. | **SUCCESS** |
+| **Web Tier Direct Access:** Direct HTTP connection bypass to Web Server | Request dropped; Web servers only accept traffic from the ALB. | **SUCCESS** |
+| **Lateral Movement:** Compromised Web Server SSH attempt to App Server | Connection timeout; App server strictly limits SSH ingress to the Bastion. | **SUCCESS** |
+| **Database Access:** Web Server to OpenSearch isolation check | Web server direct queries fail; OpenSearch only permits authenticated App Server traffic. | **SUCCESS** |
+| **Application Load Balancer:** Traffic distribution check | ALB balances web traffic to both Web servers. | **SUCCESS** |
+| **Instance Self-Healing:** EC2 instance health detection and recovery | After terminating an instance, the ALB detects an unhealthy instance, and the ASG automatically deploys a replacement instance. | **SUCCESS** |
