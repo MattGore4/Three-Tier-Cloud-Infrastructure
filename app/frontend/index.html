@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Knowledge Base</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Acme Corp</div>
+            <h1>Internal Knowledge Base</h1>
+            <p>Search technological information, troubleshooting guides, and process documentation.</p>
+        </header>
+
+        <main>
+            <form id="search-form" class="search-bar">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search the knowledge base..."
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="loading-indicator" class="hidden">Searching OpenSearch...</div>
+
+            <div id="results-container">
+                </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
